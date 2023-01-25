@@ -1,21 +1,23 @@
 function binarySearch(array, itemLookingFor) {
   let lowestIndex = 0;
-  let highestIndex = length(array);
+  let highestIndex = array.length - 1;
 
   while (lowestIndex <= highestIndex) {
-    let middleIndex = lowestIndex + highestIndex / 2;
+    let middleIndex = Math.floor((lowestIndex + highestIndex) / 2);
     let guess = array[middleIndex];
 
-    if (guess === itemLookingFor) {
+    if (itemLookingFor === guess) {
       return middleIndex;
     }
 
-    if (guess > itemLookingFor) {
+    if (itemLookingFor < guess)  {
       highestIndex = middleIndex - 1;
-    } else {
+    } 
+    
+    if (itemLookingFor > guess) {
       lowestIndex = middleIndex + 1;
     }
-
-    return null;
   }
+
+  return -1;
 }
