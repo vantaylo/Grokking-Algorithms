@@ -1,14 +1,21 @@
-function findSmallestValue(array) {
-  currentSmallestValue = 0;
-  indexCurrentSmallestValue = 0;
+function selectionSort(arr) {
+  for (let i = 0; i < arr.length; i++) {
+   let lowestValue = arr[i];
+   let indexOflowestValue = i;
 
-for (i = 0; i <= array.length; i++) {
-  if (arr[i] < currentSmallestValue) {
-    currentSmallestValue = arr[i];
-    indexCurrentSmallestValue = i;
+    for (let j = i + 1; j < arr.length; j++) {
+      if (arr[j] < lowestValue) {
+        lowestValue = arr[j];
+        indexOflowestValue = j;
+      }
+    }
+
+    let temp = arr[i];
+    arr[i] = arr[indexOflowestValue];
+    arr[indexOflowestValue] = temp;
   }
+
+  return arr;
 }
 
-return indexCurrentSmallestValue;
-
-}
+module.exports = selectionSort;
