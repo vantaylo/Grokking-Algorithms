@@ -15,7 +15,18 @@
 | -------------- | ---------------------- |
 | Big-O          | O(n^2)                 |
 | Data Structure | Array                  |
-| Class          | Search algorithm       |
+| Class          | Sorting algorithm      |
 | Input          | Array                  |
 | Returns        | Sorted Array           |
 | Types          | Iterative<br>Recursive |
+
+<br>
+
+| Quick Sort     |                              |
+| -------------- | ---------------------------- |
+| Big-O          | W: O(n^2) A: O(n Log n)      |
+| Data Structure | Array                        |
+| Class          | divide-and-conquer algorithm |
+| Input          | Array                        |
+| Returns        | Sorted Array                 |
+| Types          | Iterative<br>Recursive       |
