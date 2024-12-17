@@ -26,7 +26,29 @@
 | -------------- | ---------------------------- |
 | Big-O          | W: O(n^2) A: O(n Log n)      |
 | Data Structure | Array                        |
-| Class          | divide-and-conquer algorithm |
+| Class          | Divide-and-Conquer algorithm |
 | Input          | Array                        |
 | Returns        | Sorted Array                 |
 | Types          | Iterative<br>Recursive       |
+
+<br>
+
+| Composite      | \*array for storage, additional structures to handle collisions |
+| -------------- | --------------------------------------------------------------- |
+| Big-O          | W: O(n) A: O(1)                                                 |
+| Data Structure | Hash Table (Map)                                                |
+| Class          | Search                                                          |
+| Input          | Map, Key, Value, Oper Type, Hash Func                           |
+| Returns        | Value                                                           |
+| Types          | Iterative                                                       |
+
+<br>
+
+|                |     |
+| -------------- | --- |
+| Big-O          |     |
+| Data Structure |     |
+| Class          |     |
+| Input          |     |
+| Returns        |     |
+| Types          |     |
