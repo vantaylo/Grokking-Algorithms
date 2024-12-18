@@ -1,18 +1,10 @@
 const HashTable = require('./hashTable');
 
 describe('Hash', () => {
-  // *Basic Operations
-  // Insertion
-  // Lookup
-  // Deletion
-  // Update
-
   it('insert ', () => {
     const hashTable = new HashTable();
     hashTable.insert('test', 'test');
     expect(hashTable.lookup('test')).toEqual('test');
-
- 
   });
 
   it('lookup ', () => {
@@ -27,7 +19,7 @@ describe('Hash', () => {
     hashTable.delete('test');
     expect(hashTable.lookup('test')).toBeUndefined();
   });
-  
+
   it('update ', () => {
     const hashTable = new HashTable();
     hashTable.insert('test', 'test');
@@ -40,6 +32,32 @@ describe('Hash', () => {
   // Key Not Found
   // Duplicate Keys
   // Null/Undefined Keys or Values
+
+  it('Empty Hash Table', () => {
+    const hashTable = new HashTable();
+    expect(hashTable.lookup('test')).toBeUndefined();
+  });
+
+  it('Key Not Found', () => {
+    const hashTable = new HashTable();
+    hashTable.insert('test', 'test');
+    expect(hashTable.lookup('test2')).toBeUndefined();
+  });
+
+  it('Duplicate Keys', () => {
+    const hashTable = new HashTable();
+    hashTable.insert('test', 'test');
+    hashTable.insert('test', 'test2');
+    expect(hashTable.lookup('test')).toEqual('test2');
+  });
+
+  it('Null/Undefined Keys or Values', () => {
+    const hashTable = new HashTable();
+    hashTable.insert(null, 'test');
+    expect(hashTable.lookup(null)).toEqual('test');
+    hashTable.insert('test', null);
+    expect(hashTable.lookup('test')).toBeNull();
+  });
 
   // *Collision Handling
   // Collision Resolution
