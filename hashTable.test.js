@@ -66,10 +66,34 @@ describe('Hash', () => {
   // *Performance and Load
   // Large Dataset Handling
   // Load Factor Behavior
+  it('Large Dataset Handling', () => {
+    const hashTable = new HashTable();
+    for (let i = 0; i < 1000; i++) {
+      hashTable.insert(i, i);
+    }
+    for (let i = 0; i < 1000; i++) {
+      expect(hashTable.lookup(i)).toEqual(i);
+    }
+  });
+
+  it('Load Factor Behavior', () => {
+    const hashTable = new HashTable();
+    for (let i = 0; i < 1000; i++) {
+      hashTable.insert(i, i);
+    }
+    expect(hashTable.loadFactor()).toBeLessThanOrEqual(1);
+  });
 
   // *Key Types
   // Different Key Types
   // Custom Hash Functions
+  it('Different Key Types', () => {
+    const hashTable = new HashTable();
+    hashTable.insert(1, 'test');
+    hashTable.insert('1', 'test2');
+    expect(hashTable.lookup(1)).toEqual('test');
+    expect(hashTable.lookup('1')).toEqual('test2');
+  });
 
   // *Order and Consistency
   // Consistency
@@ -82,8 +106,5 @@ describe('Hash', () => {
   // *Hash Function Testing
   // Correct Index Calculation
   // Edge Cases for Hash Function
-
-
-
 });
 
