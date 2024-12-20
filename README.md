@@ -44,7 +44,18 @@
 
 <br>
 
-|                |     |
+| Breadt-First Search |                           |
+| ------------------- | ------------------------- |
+| Big-O               | O(1), O(IVI + IEI)        |
+| Data Structure      | Graph (Queue/FIFO)        |
+| Class               | Graph Traversal algorithm |
+| Input               | Graph, Start              |
+| Returns             | Visited, Target           |
+| Types               | Iterative                 |
+
+<br>
+
+| Dijkstra       |     |
 | -------------- | --- |
 | Big-O          |     |
 | Data Structure |     |
@@ -52,3 +63,25 @@
 | Input          |     |
 | Returns        |     |
 | Types          |     |
+
+<br>
+
+| Greedy         |     |
+| -------------- | --- |
+| Big-O          |     |
+| Data Structure |     |
+| Class          |     |
+| Input          |     |
+| Returns        |     |
+| Types          |     |
+
+<br>
+
+| K-Nearest Neighbors |     |
+| ------------------- | --- |
+| Big-O               |     |
+| Data Structure      |     |
+| Class               |     |
+| Input               |     |
+| Returns             |     |
+| Types               |     |
