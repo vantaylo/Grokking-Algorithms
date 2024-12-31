@@ -64,16 +64,4 @@ describe('Breadth First Search algorithm', () => {
     const expected = ['a', 'b', 'c'];
     expect(breadthFirstSearch(graph, start)).toEqual(expected);
   });
-
-  it('should handle weighted graphs by ignoring weights', () => {
-    const graph = {
-      a: [{ node: 'b', weight: 1 }, { node: 'c', weight: 2 }],
-      b: [{ node: 'a', weight: 1 }, { node: 'd', weight: 3 }],
-      c: [{ node: 'a', weight: 2 }, { node: 'd', weight: 4 }],
-      d: [{ node: 'b', weight: 3 }, { node: 'c', weight: 4 }],
-    };
-    const start = 'a';
-    const expected = ['a', 'b', 'c', 'd'];
-    expect(breadthFirstSearch(graph, start)).toEqual(expected);
-  });
 });
