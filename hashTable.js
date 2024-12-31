@@ -1,26 +1,25 @@
-class HashTable {
-  constructor() {
-    this.values = {};
-    this.length = 0;
+const HashTablePrototype = {
+  insert(key, value){
+    this.values[key] = value;
+    this.length++;
+  },
+  lookup(key){
+    return this.values[key];
+  },
+  delete(key) {
+    delete this.values[key];
+    this.length--;  
+  },
+  update(key, value) {
+    this.values[key] = value
   }
-}
+};
 
-HashTable.prototype.insert = function(key, value) {
-  this.values[key] = value;
-  this.length++;
-}
+function createHashTable(){
+  const hashTable = Object.create(HashTablePrototype);
+  hashTable.values = {};
+  hashTable.length = 0;
+  return hashTable;
+};
 
-HashTable.prototype.lookup = function(key) {
-  return this.values[key];
-}
-
-HashTable.prototype.delete = function(key) {
-  delete this.values[key];
-  this.length--;
-}
-
-HashTable.prototype.update = function(key, value) {
-  this.values[key] = value;
-}
-
-module.exports = HashTable;
+module.exports = createHashTable;
