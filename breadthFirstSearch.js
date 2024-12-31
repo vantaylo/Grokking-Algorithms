@@ -2,6 +2,10 @@ function breadthFirstSearch(graph, start) {
   const visited = [];
   const queue = [start];
 
+  if (!graph[start]) {
+    return visited;
+  }
+  
   while (queue.length > 0) {
     const node = queue.shift();
 
